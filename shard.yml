@@ -1,12 +1,12 @@
-name: ed_admin
+name: my_lucky_app
 version: 0.1.0
 
 authors:
   - your-name-here <your-email-here>
 
 targets:
-  ed_admin:
-    main: src/ed_admin.cr
+  my_lucky_app:
+    main: src/my_lucky_app.cr
 
 crystal: 1.1.1
 

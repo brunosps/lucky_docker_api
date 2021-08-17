@@ -1,7 +1,7 @@
 FROM crystallang/crystal:1.1.1-alpine-build as build-image
 
 ENV MUSL_LOCPATH /usr/share/i18n/locales/musl
-ENV MUSL_LOCALE_DEPS cmake make musl-dev gcc gettext-dev libintl tmux
+ENV MUSL_LOCALE_DEPS cmake make musl-dev gcc gettext-dev libintl
 
 RUN apk add --no-cache --update \
   $MUSL_LOCALE_DEPS \
@@ -27,7 +27,7 @@ FROM crystallang/crystal:1.1.1-alpine as runtime-image
 
 WORKDIR /opt/app/
 
-RUN apk add --no-cache --update postgresql-client bash tmux
+RUN apk add --no-cache --update postgresql-client bash tmux vim
 COPY --from=build-image /usr/local/bin/lucky /usr/local/bin/lucky
 COPY --from=build-image /usr/local/bin/overmind /usr/local/bin/overmind
 COPY --from=build-image /usr/local/bin/entrypoint.sh /usr/local/bin/entrypoint.sh

@@ -1,4 +1,4 @@
-# ed_admin
+# my_lucky_app
 
 This is a project written using [Lucky](https://luckyframework.org). Enjoy!
 

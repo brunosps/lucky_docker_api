@@ -1,4 +1,4 @@
-name: ed_admin CI
+name: my_lucky_app CI
 
 on:
   push:
